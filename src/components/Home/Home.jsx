@@ -1,9 +1,18 @@
 import "./Home.scss";
 import Banner from './Banner/Banner'
+import Category from "./Category/Category";
+import Products from "../Products/Products"
+
 const Home = () => {
-    return <>
-    <Banner></Banner>
-    </>;
+    return <div>
+    <Banner/>
+    <div className="main-content">
+        <div className="layput">
+             <Category/>
+             <Products/>
+        </div>
+    </div>
+    </div>;
 };
 
 export default Home;
