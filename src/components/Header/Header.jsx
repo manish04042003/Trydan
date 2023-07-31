@@ -13,6 +13,8 @@ const Header = () => {
 
     const [scrolled,setscrolled] = useState(false)
     const [showCart,setshowCart] = useState(false)
+    const [showSearch,setshowSearch] = useState(false)
+
 
 
     const handleScroll =()=>{
@@ -38,7 +40,7 @@ const Header = () => {
                 </ul>
                 <div className="center">TRYDAN</div>
                 <div className="right">
-                    <TbSearch/>
+                    <TbSearch onClick={()=>setshowSearch(true)}/>
                     <AiOutlineHeart/>
                     <span className="cart-icon" onClick={()=>setshowCart(true)}>
                         <CgShoppingCart/>
@@ -48,6 +50,8 @@ const Header = () => {
             </div>
         </header>
         {showCart && <Cart setshowCart = {setshowCart}/> }
+        {showSearch && <Search setshowSearch = {setshowSearch}/> }
+
         
         </>
     );
